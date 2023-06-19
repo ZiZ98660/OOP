@@ -1,0 +1,26 @@
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <h2><%= section.title %></h2>
+    <p><%= section.body %></p>
+    <a class="delete" style="cursor: pointer" data-doc="<%= section._id %>"
+      >delete</a
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      let delBtn = document.querySelector("a.delete");
+
+      delBtn.addEventListener("click", (e) => {
+        const delUrl = `/sections/${delBtn.dataset.doc}`;
+
+        axios
+          .delete(delUrl)
+          .then((response) => (window.location.href = response.data.redirect))
+          .catch((error) => {
+            console.log(error);
+          });
+      });
+    </script>
+  </body>
+</html>

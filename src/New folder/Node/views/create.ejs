@@ -1,0 +1,14 @@
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <form style="display: grid; width: 45%" action="/sections" method="post">
+      <label for="title">Section title</label>
+      <input style="border-radius: 5px" type="text" required name="title" />
+      <label for="snippet">Section Snippet</label>
+      <input style="border-radius: 5px" type="text" required name="snippet" />
+      <label for="body">Section body</label>
+      <textarea style="border-radius: 5px" required name="body"></textarea>
+      <button style="margin-top: 1em; padding-block: 0.6em">Submit</button>
+    </form>
+  </body>
+</html>
