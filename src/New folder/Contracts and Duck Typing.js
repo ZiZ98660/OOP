@@ -1,12 +1,12 @@
 /* Managing Dynamic Typing */
 // Data typing and objects
-function SoftwareHouse() {
-  this.employees = [];
-}
+// function SoftwareHouse() {
+//   this.employees = [];
+// }
 
-SoftwareHouse.prototype.hire = function (dev) {
-  this.employees.push(dev);
-};
+// SoftwareHouse.prototype.hire = function (dev) {
+//   this.employees.push(dev);
+// };
 
 class SoftwareHouse {
   constructor() {

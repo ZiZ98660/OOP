@@ -63,7 +63,7 @@ const Fetch: React.FC<FACProps> = ({ children, url }) => {
     await fetch(`${url}`)
       .then((response) => response.json())
       .then((dt) => {
-        dt ? setData(dt) : "";
+        dt ? setData(dt) : setData(['']);
       });
   }, [url]);
 

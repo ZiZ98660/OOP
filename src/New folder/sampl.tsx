@@ -21,7 +21,7 @@ const ChildComponent: React.FC<Props> = ({ children }) => {
   return children({ message: "Hello" });
 };
 
-const ParentComponent = () => {
+const ParentComponent = () => { 
   return (
     <ChildComponent>{({ message }) => <div>{message}</div>}</ChildComponent>
   );
